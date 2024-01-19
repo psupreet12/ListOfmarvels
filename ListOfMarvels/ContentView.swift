@@ -6,17 +6,29 @@
 //
 
 import SwiftUI
-
 struct ContentView: View {
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+//        
+       TabView{
+        
+            CharactersView()
+                .tabItem{
+                    Image(systemName: "person.3.fill")
+                    Text("Characters")
+                }
+            
+            Text("Comics")
+                .tabItem{
+                    Image(systemName: "books.vertical.fill")
+                    Text("Comics")
+                }
         }
-        .padding()
+        
+        
     }
+    
+
 }
 
 #Preview {
